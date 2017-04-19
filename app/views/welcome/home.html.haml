@@ -1,4 +1,68 @@
 = content_for :page_title, 'Home'
 
-%h1.heading-large Welcome#home
-%p Find me in app/views/welcome/home.html.haml
+.product-page-section#masthead
+  .grid-row
+    .column-one-half
+      %h1.heading-xlarge Use authoritative location data to build your service
+      %p Some text explaining what Registers are in a clear and concise way so service teams get it.
+      = link_to "View the data", "#", class: "button button-start"
+    .column-one-half
+      = image_tag "picker.gif", alt: "A demo of how register data can work on a form", title: ""
+
+.product-page-section
+  .grid-row
+    .column-one-half
+      %h2.heading-large Using goverment data is challenging
+      %ul
+        %li Government data is hard to find, use and share
+        %li There are duplicates that lead to confusion
+        %li The data sources are not reliable
+    .column-one-half
+      %h2.heading-large Registers can solve these problems
+      %ul
+        %li Lists of information available to everyone
+        %li One single source of information
+        %li A stable solution that you can rely on for your service
+
+.product-page-section
+  .grid-row
+    .column-one-half
+      %h2.heading-large What are Registers?
+      %p A brief explanation of what registers are, how they are conected and combining them is what adds value to a service.
+      %p 
+        = link_to "Find more about Registers", "#"
+    .column-one-half
+      = image_tag "registers-illustration.png", alt: "Illustration of the cocept of registers", title: "", class: "illustration"
+
+
+.product-page-section
+  .grid-row
+    .column-one-half
+      %h2.heading-large How to use Registers on your service
+      %p A brief explanation of how easy it is to integrate Registers in your service, what are the steps in then process and who in your team can look into this.
+      %ul 
+        %li
+          = link_to "Explore the data", "#"
+        %li
+          = link_to "Read the technical documentation", "#"
+    .column-one-half
+      = image_tag "video_mockup.png", alt: "Video to learn how to integrate registers in your service", title: ""
+
+
+.product-page-section
+  .grid-row
+    .column-full
+      %h2.heading-large.section-header.centered Who's working with Registers
+      %p add icons here
+
+
+.product-page-section
+  .grid-row
+    .column-one-half
+      %h2.heading-large Get in touch
+      %p 
+        = link_to "Contact the team", "#" 
+        if you have any questions about using GOV.UK Registers or integrating it with your service.
+      %p GOV.UK Registers is built and supported by a full time team at the Government Digital Service.
+    .column-one-half
+      = image_tag "registers-team.png", alt: "Video to learn how to integrate registers in your service", title: ""

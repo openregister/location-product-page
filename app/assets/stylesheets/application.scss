@@ -12,6 +12,10 @@ a:visited {
   color: $govuk-blue;
 }
 
+img {
+  max-width: 100%;
+}
+
 .inline-link {
   background: none;
   border: none;
@@ -86,4 +90,80 @@ table {
     font-size: 19px;
     line-height: 1.31579
   }
+}
+
+// pages styling
+
+main#content {
+  max-width: 100%;
+}
+
+.product-page-section {
+  max-width: 960px;
+  margin: auto;
+  padding: 50px 0;
+  border-bottom: 1px solid #BFC1C3;
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  h2 {
+    margin-top: 0;
+    &.section-header {
+      padding: 0 15px;
+    }
+    &.centered {
+      text-align: center;
+    }
+
+  }
+
+  h3 {
+    margin-top: 0;
+  }
+
+  img {
+    float: right;
+    &.illustration {
+      max-width: 80%;
+    }
+  }
+
+}
+
+#masthead {
+  background-color: #005EA5;
+  max-width: 100%;
+  .grid-row {
+    max-width: 960px;
+    margin: auto;
+    color: #fff;
+  }
+  h1 {
+      margin-bottom: 0.5em;
+      margin-top: 0;
+    }
+  img {
+    max-width: 100%;
+    display: block;
+    border: 2px solid #DEE0E2;
+    border-radius: 2px;
+    }
+
+  a.button.button-start {
+    background: #fff;
+    box-shadow: 0 2px 0 #003259;
+    color: #005EA5;
+    font-weight: bold;
+    padding: 10px 25px 8px 20px;
+  }
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+#global-header-bar {
+  max-width: 100%;
 }
