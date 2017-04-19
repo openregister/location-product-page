@@ -1,0 +1,23 @@
+= content_for :page_title, 'Locations'
+
+%h1.heading-xlarge Locations
+
+%table
+  %thead
+    %tr
+      %th Key
+      %th Name
+      %th Official name
+      %th Citizen name
+      %th Start date
+      %th End date
+
+  %tbody{class: "js-filter-block"}
+    - @locations.each do |location|
+      %tr{class: "js-filter-item", "data-filter-terms" => "#{location.official_name} #{location.name}"}
+        %td= location.key
+        %td= location.name
+        %td= location.official_name
+        %td= location.try(:citizen_names)
+        %td= location.start_date
+        %td= location.end_date
