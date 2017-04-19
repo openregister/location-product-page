@@ -1,0 +1,20 @@
+- content_for :page_title, ' - GOV.UK Country Register'
+
+- content_for :inside_header do
+  %h1.header-title Country Registers
+
+- content_for :homepage_url, "/"
+
+- content_for :head do
+  = stylesheet_link_tag 'application'
+  = csrf_meta_tags
+
+- content_for :content do
+  %main#content{role:'main', tabindex: "-1"}
+    = content_for?(:main) ? yield(:main) : yield
+
+- content_for :body_end do
+  = javascript_include_tag 'application'
+  = yield(:javascript)
+
+= render file: 'layouts/govuk_template'

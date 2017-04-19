@@ -1,0 +1,89 @@
+// Import GOV.UK frontend toolkit
+@import "govuk-elements";
+
+// Override table font size
+table td,
+table th {
+  font-size: 16px;
+}
+
+// Override purple colour
+a:visited {
+  color: $govuk-blue;
+}
+
+.inline-link {
+  background: none;
+  border: none;
+  color: $govuk-blue;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: underline;
+  vertical-align: top;
+  -webkit-appearance: none;
+}
+
+.form-control.disabled {
+  border-color: $grey-2;
+  color: $grey-2;
+}
+
+table {
+  margin-bottom: 20px;
+}
+
+.panel-change-notification {
+  background-color: rgba($yellow-50, 0.5);
+  border-color: $yellow-50;
+  border-width: 5px;
+  display: inline-block;
+  margin: 0 20px 0 0;
+  width: 100%;
+}
+
+.notice {
+  margin: 30px 0;
+}
+
+.flash {
+  background-color: $grey-1;
+  color: $white;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 15px 0;
+  padding: 15px;
+}
+
+.flash--dangerous {
+  background-color: $red;
+}
+
+.flash--notice {
+  background-color: $turquoise;
+}
+
+.page-header {
+  margin-bottom: 1.25em;
+
+  .heading-large {
+    margin-top: 13px;
+  }
+}
+
+.align-with-heading {
+  float: right;
+  margin-top: 13px;
+}
+
+@media (min-width: 641px) {
+  .heading-large {
+    margin-top: 0.625em;
+    margin-bottom: 0.625em;
+  }
+
+  .flash {
+    font-size: 19px;
+    line-height: 1.31579
+  }
+}
