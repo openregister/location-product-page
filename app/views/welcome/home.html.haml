@@ -35,13 +35,13 @@
 
   .product-page-section
     .grid-row
+      %h2.heading-large.section-header Data provided by government organisations
       .column-two-thirds
-        %h2.heading-large Data provided by government organisations
         %blockquote
-          The register is a means for the FCO to share our knowledge more widely, not least for our usual audience of subject matter experts, but also with other government partners and stakeholders. We can now think in more detail about what colleagues across government actually need
-        %p.bold-xsmall Tony Worron - Desk Officer for Geographical Information Policy, FCO
+          The register is a means for the FCO to share our knowledge more widely, not least for our usual audience of subject matter experts, but also with other government partners and stakeholders. We can now think in more detail about what colleagues across government actually need.
+          %p.bold-xsmall Tony Worron - Desk Officer for Geographical Information Policy, FCO
       .column-one-third
-        = image_tag "1280px-Foreign_and_Commonwealth_Office_Logo.svg.png"
+        = image_tag "1280px-Foreign_and_Commonwealth_Office_Logo.svg.png", class: "logo quote"
 
   .product-page-section
     .grid-row
@@ -58,12 +58,12 @@
       .column-full
         %h2.heading-large.section-header.centered Who's working with Registers
         %ul.org-logos
-          %li= image_tag "Home_Office.svg"
-          %li= image_tag "1280px-Foreign_and_Commonwealth_Office_Logo.svg.png"
-          %li= image_tag "Department_for_Work_and_Pensions_logo.svg"
-          %li= image_tag "Department_for_Education.svg"
-          %li= image_tag "Ministry_of_Justice_logo.svg"
-          %li= image_tag "Department_for_Communities_and_Local_Government_logo.svg"
+          %li= image_tag "Home_Office.svg", class: "logo", id: "home-office"
+          %li= image_tag "1280px-Foreign_and_Commonwealth_Office_Logo.svg.png", class: "logo", id: "fco"
+          %li= image_tag "Department_for_Work_and_Pensions_logo.svg", class: "logo", id: "dwp"
+          %li= image_tag "Department_for_Education.svg", class: "logo", id: "education"
+          %li= image_tag "Ministry_of_Justice_logo.svg", class: "logo", id: "moj"
+          %li= image_tag "Department_for_Communities_and_Local_Government_logo.svg", class: "logo", id: "local-government"
 
   .product-page-section
     .grid-row

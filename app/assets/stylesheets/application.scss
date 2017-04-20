@@ -112,14 +112,30 @@ table {
     display: inline-block;
     margin: 20px 1%;
     width: 28%;
-
+    height: 100px;
     @include media(tablet) {
       width: 14%;
     }
+
   }
 
   img {
     display: block;
+    &#home-office {
+      width: 100px;
+    }
+    &#fco {
+      width: 115px;
+    }
+    &#dwp {
+      width: 90px;
+    }
+    &#education {
+      width: 95px;
+    }
+    &#moj {
+      width: 75px;
+    }
   }
 }
 
@@ -130,4 +146,15 @@ table {
 .bulleted-list {
   list-style-type: disc;
   padding-left: 20px;
+}
+
+p.bold-xsmall {
+  margin-top: 15px;
+}
+
+.logo {
+  max-height: 100px;
+  &.quote {
+    margin-top: 20px;
+  }
 }
