@@ -1,4 +1,68 @@
 = content_for :page_title, 'Home'
 
-%h1.heading-large Welcome#home
-%p Find me in app/views/welcome/home.html.haml
+.product-page-section#masthead
+  .grid-row
+    .column-one-half
+      %h1.heading-xlarge Build your digital service using accurate data you can trust
+      %p Access authoritative open government data in one place, to use anywhere
+      = link_to "View the data", "#", class: "button button-start"
+    .column-one-half
+      = image_tag "picker.gif", alt: "A demo of how register data can work on a form", title: ""
+
+.product-page-section
+  .grid-row
+    %h2.heading-large.section-header Registers in a nutshell
+    .column-one-third
+      %h3.heading-small What is a register?
+      %p Each register contains unique and reliable data that can be combined to power your service.
+    .column-one-third
+      %h3.heading-small How can I trust the data?
+      %p A register is an official list of data provided by government organisations.
+    .column-one-third
+      %h3.heading-small Who manages the data?
+      %p The register’s custodian can access the source of data and make sure it’s consistently updated.
+
+
+
+.product-page-section
+  .grid-row
+    .column-one-half
+      %h2.heading-large How registers work
+      %p The data in registers is made up of records that are made up of fields and and values. You can use these fields and values across any register, letting you link registers in a customised way to build your service.
+      %p 
+        = link_to "Find more about using Registers", "#"
+    .column-one-half
+      = image_tag "registers-illustration.png", alt: "Illustration of the cocept of registers", title: "", class: "illustration"
+
+
+.product-page-section
+  .grid-row
+    .column-one-half
+      %h2.heading-large Working with registers
+      %p You can either download a copy of the register in full or any part of it, or use its read-only API to help you find a single record, entry or item. Or get all the records by choosing the format that suits you.
+      %ul 
+        %li
+          = link_to "Explore the data", "#"
+        %li
+          = link_to "Read the technical documentation", "#"
+    .column-one-half
+      = image_tag "video_mockup.png", alt: "Video to learn how to integrate registers in your service", title: ""
+
+
+.product-page-section
+  .grid-row
+    .column-full
+      %h2.heading-large.section-header.centered Who's working with Registers
+      %p add icons here
+
+
+.product-page-section
+  .grid-row
+    .column-one-half
+      %h2.heading-large Get in touch
+      %p 
+        = link_to "Contact the team", "#" 
+        if you have any questions about using GOV.UK Registers or integrating it with your service.
+      %p GOV.UK Registers is built and supported by a full time team at the Government Digital Service.
+    .column-one-half
+      = image_tag "registers-team.png", alt: "Video to learn how to integrate registers in your service", title: ""
