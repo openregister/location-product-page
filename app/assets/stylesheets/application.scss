@@ -131,3 +131,25 @@ table {
   list-style-type: disc;
   padding-left: 20px;
 }
+
+.typeahead__wrapper {
+  width: 50%;
+}
+
+.filter-locations {
+  border: 2px solid $grey-3;
+  margin-bottom: 40px;
+  padding: 20px;
+
+  .heading-medium {
+    margin-top: 0;
+  }
+
+  .bold-small {
+    margin-bottom: 10px;
+  }
+
+  .button {
+    margin-top: 20px;
+  }
+}

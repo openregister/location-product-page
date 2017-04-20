@@ -7,7 +7,9 @@
 
 - content_for :head do
   = stylesheet_link_tag 'application'
+  = stylesheet_link_tag '//unpkg.com/accessible-typeahead@0.4.0/examples/styled.css'
   = csrf_meta_tags
+  = javascript_include_tag "//unpkg.com/accessible-typeahead@0.4.0"
 
 - content_for :content do
   %main{role:'main', tabindex: "-1"}
