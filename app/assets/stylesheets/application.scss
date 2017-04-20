@@ -7,6 +7,16 @@ table th {
   font-size: 16px;
 }
 
+blockquote {
+  @extend .panel;
+  @extend .panel-border-wide;
+
+  cite {
+    display: block;
+    margin-top: 20px;
+  }
+}
+
 // Override purple colour
 a:visited {
   color: $govuk-blue;
@@ -67,14 +77,6 @@ table {
   h3 {
     margin-top: 0;
   }
-
-  img {
-    float: right;
-    &.illustration {
-      max-width: 80%;
-    }
-  }
-
 }
 
 .masthead {
@@ -108,8 +110,12 @@ table {
 
   li {
     display: inline-block;
-    margin: 0 1%;
-    width: 14%;
+    margin: 20px 1%;
+    width: 28%;
+
+    @include media(tablet) {
+      width: 14%;
+    }
   }
 
   img {
