@@ -13,21 +13,30 @@
 .container
   .product-page-section
     .grid-row
-      %h2.heading-large.section-header In a nutshell
-      .column-one-third
-        %h3.heading-small What is a register?
-        %p Each register contains unique and reliable data that can be combined to power your service.
-      .column-one-third
-        %h3.heading-small How can I trust the data?
-        %p A register is an official list of data provided by government organisations.
-      .column-one-third
-        %h3.heading-small Who manages the data?
-        %p The register’s custodian can access the source of data and make sure it’s consistently updated.
+      .column-one-half
+        %h2.heading-large Using government data is challenging
+        %ul.bulleted-list
+          %li Government data is hard to find, use and share
+          %li There are duplicates that lead to confusion
+          %li The data sources are not reliable
+      .column-one-half
+        = image_tag "excel-screenshot.png", class: "image-with-border"
+
+  .product-page-section
+    .grid-row
+      .column-one-half
+        %h2.heading-large Location registers can solve these problems
+        %ul.bulleted-list
+          %li Lists of information available to everyone
+          %li One single source of information provided by government organisations
+          %li A stable solution that you can rely on for your service
+      .column-one-half
+        = image_tag "location-table-screenshot.png", class: "image-with-border"
 
   .product-page-section
     .grid-row
       .column-two-thirds
-        %h2.heading-large Who manages the data
+        %h2.heading-large Data provided by government organisations
         %blockquote
           The register is a means for the FCO to share our knowledge more widely, not least for our usual audience of subject matter experts, but also with other government partners and stakeholders. We can now think in more detail about what colleagues across government actually need
         %p.bold-xsmall Tony Worron - Desk Officer for Geographical Information Policy, FCO
@@ -38,16 +47,16 @@
     .grid-row
       .column-one-half
         %h2.heading-large Location picker
-        %p Allow your service to find accurate, accessible country and territory data in our Location picker
+        %p We’ve built a location picker that uses the Country and Territory registers. With this picker, the users of your service will be able to provide information using authoritative and reliable data.
         %p
           = link_to "Find more about our location picker", "https://designnotes.blog.gov.uk/2017/04/20/were-building-an-autocomplete/", target: :blank
       .column-one-half
-        = image_tag "picker.gif", alt: "A demo of how register data can work on a form", class: "picker-gif"
+        = image_tag "picker.gif", alt: "A demo of how register data can work on a form", class: "image-with-border"
 
   .product-page-section
     .grid-row
       .column-full
-        %h2.heading-large.section-header.centered Who's using our service
+        %h2.heading-large.section-header.centered Who's working with Registers
         %ul.org-logos
           %li= image_tag "Home_Office.svg"
           %li= image_tag "1280px-Foreign_and_Commonwealth_Office_Logo.svg.png"
@@ -55,19 +64,6 @@
           %li= image_tag "Department_for_Education.svg"
           %li= image_tag "Ministry_of_Justice_logo.svg"
           %li= image_tag "Department_for_Communities_and_Local_Government_logo.svg"
-
-  .product-page-section
-    .grid-row
-      .column-one-half
-        %h2.heading-large Working with registers
-        %p You can either download a copy of the register in full or any part of it, or use its read-only API to help you find a single record, entry or item. Or get all the records by choosing the format that suits you.
-        %ul
-          %li
-            = link_to "Explore the data", "#"
-          %li
-            = link_to "Read the technical documentation", "#"
-      .column-one-half
-        = image_tag "video_mockup.png", alt: "Video to learn how to integrate registers in your service"
 
   .product-page-section
     .grid-row

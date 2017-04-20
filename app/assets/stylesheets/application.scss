@@ -123,6 +123,11 @@ table {
   }
 }
 
-.picker-gif {
-  border: 2px solid #000;
+.image-with-border {
+  border: 2px solid $grey-3;
+}
+
+.bulleted-list {
+  list-style-type: disc;
+  padding-left: 20px;
 }
