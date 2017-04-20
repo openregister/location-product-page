@@ -22,6 +22,9 @@ gem 'govuk_template'
 gem 'govuk_frontend_toolkit'
 gem 'govuk_elements_rails'
 
+# Ruby client for OpenRegisters
+gem 'openregister-ruby', git: 'https://github.com/openregister/openregister-ruby'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
