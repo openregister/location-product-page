@@ -38,11 +38,23 @@
     .grid-row
       .column-one-half
         %h2.heading-large Location picker
-        %p Build your digital service using our Location Picker built with accurate, accessible  data you can trust.
+        %p Allow your service to find accurate, accessible country and territory data in our Location picker
         %p
           = link_to "Find more about our location picker", "https://designnotes.blog.gov.uk/2017/04/20/were-building-an-autocomplete/", target: :blank
       .column-one-half
-        = image_tag "picker.gif", alt: "A demo of how register data can work on a form"
+        = image_tag "picker.gif", alt: "A demo of how register data can work on a form", class: "picker-gif"
+
+  .product-page-section
+    .grid-row
+      .column-full
+        %h2.heading-large.section-header.centered Who's using our service
+        %ul.org-logos
+          %li= image_tag "Home_Office.svg"
+          %li= image_tag "1280px-Foreign_and_Commonwealth_Office_Logo.svg.png"
+          %li= image_tag "Department_for_Work_and_Pensions_logo.svg"
+          %li= image_tag "Department_for_Education.svg"
+          %li= image_tag "Ministry_of_Justice_logo.svg"
+          %li= image_tag "Department_for_Communities_and_Local_Government_logo.svg"
 
   .product-page-section
     .grid-row
@@ -56,18 +68,6 @@
             = link_to "Read the technical documentation", "#"
       .column-one-half
         = image_tag "video_mockup.png", alt: "Video to learn how to integrate registers in your service"
-
-  .product-page-section
-    .grid-row
-      .column-full
-        %h2.heading-large.section-header.centered Who's working with Registers
-        %ul.org-logos
-          %li= image_tag "Home_Office.svg"
-          %li= image_tag "1280px-Foreign_and_Commonwealth_Office_Logo.svg.png"
-          %li= image_tag "Department_for_Work_and_Pensions_logo.svg"
-          %li= image_tag "Department_for_Education.svg"
-          %li= image_tag "Ministry_of_Justice_logo.svg"
-          %li= image_tag "Department_for_Communities_and_Local_Government_logo.svg"
 
   .product-page-section
     .grid-row
