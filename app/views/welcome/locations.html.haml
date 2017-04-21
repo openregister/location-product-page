@@ -5,15 +5,14 @@
 
   .grid-row
     .column-two-thirds
-      %h1.heading-large Location Registers
-      %p.lede #{@locations.count} Locations found
+      %h1.heading-xlarge Location Registers
 
       %form.filter-locations
-        %h3.heading-medium Filter this data
+        %h2.heading-medium Filter this data
         .grid-row
           .column-one-half
             %fieldset
-              %legend.bold-small Type of location
+              %legend Type of location
               .multiple-choice
                 %input#location-type-1{name: "location-types", type: "checkbox", value: "location-countries", checked: true}
                 %label{for: "location-type-1"} Countries
@@ -22,7 +21,7 @@
                 %label{for: "location-type-2"} Territories
           .column-one-half
             %fieldset
-              %legend.bold-small Status of location
+              %legend Status of location
               .multiple-choice
                 %input#location-type-3{name: "location-types", type: "checkbox", value: "location-active", checked: true}
                 %label{for: "location-type-3"} Active
@@ -30,63 +29,70 @@
                 %input#location-type-3{name: "location-types", type: "checkbox", value: "location-inactive"}
                 %label{for: "location-type-3"} Inactive
         %button.button Filter
+      
+      %h2.heading-large #{@locations.count} Locations found
 
       = form_for root_path do |f|
-        %h3.heading-medium Location picker
+        %h3.heading-medium View results on a location picker
         .form-group
           %label.form-label-bold.visually-hidden Select location
           = f.select "locations", @locations.map(&:name), {}, id: "country_select", class: "form-control"
 
     .column-one-third
-      %h3.heading-medium About the register
+      %h3.heading-medium About the registers
       %h4.heading-small Custodian
       %p Tony Worron
       %h4.heading-small Managed by
       = image_tag "1280px-Foreign_and_Commonwealth_Office_Logo.svg.png", width: 125
       %h4.heading-small Last updated
       %p 29 March 2017
-      %p= link_to "Download this data", "https://country.register.gov.uk/download", target: :blank
+      %ul
+        %li= link_to "Download this data", "https://country.register.gov.uk/download", target: :blank
+        %li= link_to "Use this data in your service", "https://registers.cloudapps.digital/using-registers", target: :blank
 
-  %details{:role => "group"}
-    %summary{"aria-controls" => "details-content-0", "aria-expanded" => "false", :role => "button"}
-      %span.summary What are the table headers?
-    #details-content-0.panel.panel-border-narrow{"aria-hidden" => "true"}
-      %dl
-        %dt Key:
-        %dd The location's 2-letter ISO 3166-2 alpha2 code
-        %dt Name:
-        %dd The commonly-used name of a location
-        %dt Official name:
-        %dd The official or technical name of a location
-        %dt Citizen names:
-        %dd The name of a location's citizens
-        %dt Start-date
-        %dd The date a record first became relevant to a register. For example, the date a country was first recognised by the UK
-        %dt End date:
-        %dd The date a record stopped being applicable. For example, the date a school closed down
+  .grid-row
+    .column-full
+      %h3.heading-medium View results on a table
+      %details{:role => "group"}
+        %summary{"aria-controls" => "details-content-0", "aria-expanded" => "false", :role => "button"}
+          %span.summary What are the table headers?
+        #details-content-0.panel.panel-border-narrow{"aria-hidden" => "true"}
+          %dl
+            %dt Key:
+            %dd The location's 2-letter ISO 3166-2 alpha2 code
+            %dt Name:
+            %dd The commonly-used name of a location
+            %dt Official name:
+            %dd The official or technical name of a location
+            %dt Citizen names:
+            %dd The name of a location's citizens
+            %dt Start-date
+            %dd The date a record first became relevant to a register. For example, the date a country was first recognised by the UK
+            %dt End date:
+            %dd The date a record stopped being applicable. For example, the date a school closed down
 
-  %table
-    %colgroup
-      %col{width: '10%'}
-      %col{width: '20%'}
-      %col{width: '25%'}
-      %col{width: '30%'}
-      %col{width: '15%'}
-    %thead
-      %tr
-        %th Key
-        %th Name
-        %th Official name
-        %th Citizen name
-        %th Start date
-    %tbody
-      - @locations.each do |location|
-        %tr
-          %td= location.key
-          %td= location.name
-          %td= location.official_name
-          %td= location.try(:citizen_names)
-          %td= location.start_date
+      %table
+        %colgroup
+          %col{width: '10%'}
+          %col{width: '20%'}
+          %col{width: '25%'}
+          %col{width: '30%'}
+          %col{width: '15%'}
+        %thead
+          %tr
+            %th Key
+            %th Name
+            %th Official name
+            %th Citizen name
+            %th Start date
+        %tbody
+          - @locations.each do |location|
+            %tr
+              %td= location.key
+              %td= location.name
+              %td= location.official_name
+              %td= location.try(:citizen_names)
+              %td= location.start_date
 
 = content_for :javascript do
   :javascript
@@ -94,6 +100,6 @@
       element = document.querySelector('#country_select')
       AccessibleTypeahead.enhanceSelectElement({
         selectElement: element,
-        placeholder: "Search for location"
+        placeholder: "Search for a location"
       })
     });
