@@ -2,18 +2,48 @@
 @import "govuk-elements";
 
 // Override table font size
+table {
+  margin-bottom: 20px;
+}
+
 table td,
 table th {
   font-size: 16px;
 }
 
 blockquote {
-  @extend .panel;
-  @extend .panel-border-wide;
+  padding: 0 0 0 20px;
+  margin: 0;
+  border: 0;
+
+  @include media(tablet) {
+    margin:0 0 0 -30px;
+  }
+
+  p {
+    padding-left: 15px;
+
+    @include media(tablet) {
+      padding-left: 30px;
+    }
+
+    &:first-of-type:before {
+      content: "\201C";
+      float: left;
+      clear: both;
+      margin-left: -15px
+    }
+
+    &:last-of-type:after {
+      content: "\201D"
+    }
+  }
 
   cite {
     display: block;
-    margin-top: 20px;
+    font-style: normal;
+    font-weight: bold;
+    margin: -10px 0 20px 30px;
   }
 }
 
@@ -28,6 +58,10 @@ a:visited {
 
 img {
   max-width: 100%;
+}
+
+.image-right {
+  float: right;
 }
 
 .inline-link {
@@ -46,16 +80,12 @@ img {
   color: $grey-2;
 }
 
-table {
-  margin-bottom: 20px;
-}
-
-#global-header-bar {
-  display: none;
-}
-
 .container {
   @extend %site-width-container;
+}
+
+.home-page #global-header-bar {
+  display: none;
 }
 
 // pages styling
@@ -121,19 +151,24 @@ table {
 
   img {
     display: block;
-    &#home-office {
+
+    &.home-office {
       width: 100px;
     }
-    &#fco {
+
+    &.fco {
       width: 115px;
     }
-    &#dwp {
+
+    &.dwp {
       width: 90px;
     }
-    &#education {
+
+    &.education {
       width: 95px;
     }
-    &#moj {
+
+    &.moj {
       width: 75px;
     }
   }
@@ -168,13 +203,6 @@ table {
   .button {
     margin-top: 20px;
   }
-}
-
-cite {
-  margin-top: 15px;
-  color: #6F777B;
-  font-weight: bold;
-  font-style: normal;
 }
 
 .logo {

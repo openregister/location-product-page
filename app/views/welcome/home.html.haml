@@ -1,4 +1,5 @@
 = content_for :page_title, 'Home'
+= content_for :body_classes, 'home-page'
 
 .masthead.product-page-section
   .container
@@ -35,26 +36,20 @@
 
   .product-page-section
     .grid-row
-      .column-full
-        %h2.heading-large.section-header Who is using Registers
-        .column-two-thirds
-          %blockquote
-            As a high profile site, 
-            = link_to "https://petition.parliament.uk", "https://petition.parliament.uk", target: :blank
-            needs to be accurate and up-to-date wherever possible, so when we were given the chance to remove one more static set of data with an API we jumped at the chance. 
-            %strong Having an authoritative list that updates automatically eliminates a huge amount of effort when validating data and we were able to identity a number of places where we had used the wrong country name previously.
-
-            %cite Andrew White - UK Government and Parliamnent Petitions
-        .column-one-third
-          = image_tag "graphic_portcullis.png", class: "logo quote"
-          %span.petitions 
-            Petitions
+      %h2.heading-large.section-header Who is using Location registers
+      .column-two-thirds
+        %blockquote
+          %p As a high profile site, #{link_to "https://petition.parliament.uk"} needs to be accurate and up-to-date wherever possible. So when we were given the chance to remove one more static set of data with an API we jumped at the chance. This is because having an authoritative list that updates automatically eliminates a huge amount of effort when validating data. We were able to identity a number of places where we had used the wrong country name previously.
+          %cite Andrew White, UK Government and Parliamnent Petitions
+        %p= link_to "Read the full case study", "#"
+      .column-one-third
+        = image_tag "petitions-logo.jpg", width: 250, class: "image-right";
 
   .product-page-section
     .grid-row
       .column-one-half
         %h2.heading-large Location data ready to use
-        %p We’ve built a location picker that uses the Country and Territory registers. With this picker, the users of your service will be able to provide information using authoritative and reliable data.
+        %p We’ve built a location picker that uses the #{link_to "Country", "https://country.register.gov.uk/", target: :blank} and #{link_to "Territory", "https://territory.register.gov.uk/", target: :blank} registers. With this picker, the users of your service will be able to provide information using authoritative and reliable data.
         %p
           = link_to "Find more about our location picker", "https://designnotes.blog.gov.uk/2017/04/20/were-building-an-autocomplete/", target: :blank
       .column-one-half
@@ -65,12 +60,12 @@
       .column-full
         %h2.heading-large.section-header.centered Organisations creating Registers
         %ul.org-logos
-          %li= image_tag "Home_Office.svg", class: "logo", id: "home-office"
-          %li= image_tag "1280px-Foreign_and_Commonwealth_Office_Logo.svg.png", class: "logo", id: "fco"
-          %li= image_tag "Department_for_Work_and_Pensions_logo.svg", class: "logo", id: "dwp"
-          %li= image_tag "Department_for_Education.svg", class: "logo", id: "education"
-          %li= image_tag "Ministry_of_Justice_logo.svg", class: "logo", id: "moj"
-          %li= image_tag "Department_for_Communities_and_Local_Government_logo.svg", class: "logo", id: "local-government"
+          %li= image_tag "Home_Office.svg", class: "logo home-office"
+          %li= image_tag "1280px-Foreign_and_Commonwealth_Office_Logo.svg.png", class: "logo fco"
+          %li= image_tag "Department_for_Work_and_Pensions_logo.svg", class: "logo dwp"
+          %li= image_tag "Department_for_Education.svg", class: "logo education"
+          %li= image_tag "Ministry_of_Justice_logo.svg", class: "logo moj"
+          %li= image_tag "Department_for_Communities_and_Local_Government_logo.svg", class: "logo local-government"
 
 
   .product-page-section
