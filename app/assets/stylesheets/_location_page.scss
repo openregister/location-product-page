@@ -1,0 +1,36 @@
+.filter-locations {
+  background: #dee0e2;
+  margin-bottom: 40px;
+  padding: 20px;
+  legend {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .multiple-choice input {
+    background-color: #fff;
+  }
+
+  .multiple-choice [type=checkbox] + label::before {
+    background: $white;
+  }
+}
+
+details {
+  margin: 30px 0;
+}
+
+thead tr th {
+  text-decoration: underline;
+  vertical-align: top;
+  font-weight: normal;
+  color: #005ea5;
+  border-top: 2px solid #dee0e2;
+  border-bottom: 2px solid #dee0e2;
+}
+
+table th, table td {
+  padding: 15px 40px 15px 0;
+  font-size: 16px;
+  vertical-align: top;
+  border-bottom: 1px solid #DEE0E2;
+}
