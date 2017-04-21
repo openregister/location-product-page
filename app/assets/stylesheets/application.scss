@@ -17,6 +17,10 @@ blockquote {
   }
 }
 
+strong {
+  font-weight: bold;
+}
+
 // Override purple colour
 a:visited {
   color: $govuk-blue;
@@ -63,7 +67,7 @@ table {
     border-bottom: none;
   }
 
-  h2 {
+  h2, h3 {
     margin-top: 0;
     &.section-header {
       padding: 0 15px;
@@ -72,10 +76,6 @@ table {
       text-align: center;
     }
 
-  }
-
-  h3 {
-    margin-top: 0;
   }
 }
 
@@ -112,14 +112,30 @@ table {
     display: inline-block;
     margin: 20px 1%;
     width: 28%;
-
+    height: 100px;
     @include media(tablet) {
       width: 14%;
     }
+
   }
 
   img {
     display: block;
+    &#home-office {
+      width: 100px;
+    }
+    &#fco {
+      width: 115px;
+    }
+    &#dwp {
+      width: 90px;
+    }
+    &#education {
+      width: 95px;
+    }
+    &#moj {
+      width: 75px;
+    }
   }
 }
 
@@ -152,4 +168,25 @@ table {
   .button {
     margin-top: 20px;
   }
+}
+
+cite {
+  margin-top: 15px;
+  color: #6F777B;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.logo {
+  max-height: 100px;
+  &.quote {
+    margin-top: 20px;
+  }
+}
+
+span.petitions {
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  padding-left: 5px;
 }
