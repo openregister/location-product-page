@@ -9,7 +9,42 @@ table {
 
 table td,
 table th {
+  border-bottom: 1px solid $grey-3;
   font-size: 16px;
+  padding: 15px 40px 15px 0;
+  vertical-align: top;
+}
+
+thead tr th {
+  border-bottom: 2px solid $grey-3;
+  border-top: 2px solid $grey-3;
+  color: $govuk-blue;
+  font-weight: normal;
+  text-decoration: underline;
+  vertical-align: top;
+}
+
+details {
+  margin: $gutter 0;
+}
+
+dl {
+  overflow: hidden;
+
+  dt {
+    clear: left;
+    float: left;
+    font-weight: bold;
+    padding-bottom: 1em;
+    width: 35%;
+  }
+
+  dd {
+    float: left;
+    margin: 0;
+    padding-bottom: 1em;
+    width: 65%;
+  }
 }
 
 blockquote {
@@ -18,7 +53,7 @@ blockquote {
   border: 0;
 
   @include media(tablet) {
-    margin:0 0 0 -30px;
+    margin: 0 0 0 -30px;
   }
 
   p {
@@ -32,7 +67,7 @@ blockquote {
       content: "\201C";
       float: left;
       clear: both;
-      margin-left: -15px
+      margin-left: -15px;
     }
 
     &:last-of-type:after {
@@ -52,6 +87,22 @@ strong {
   font-weight: bold;
 }
 
+.hide-for-small {
+  display: none;
+
+  @include media(tablet) {
+    display: inherit;
+  }
+}
+
+.hide-for-large {
+  display: inherit;
+
+   @include media(tablet) {
+    display: none;
+  }
+}
+
 // Override purple colour
 a:visited {
   color: $govuk-blue;
@@ -62,23 +113,19 @@ img {
 }
 
 .image-right {
-  float: right;
+  @include media(tablet) {
+    float: right;
+  }
 }
 
-.inline-link {
-  background: none;
-  border: none;
-  color: $govuk-blue;
-  cursor: pointer;
-  display: inline-block;
-  text-decoration: underline;
-  vertical-align: top;
-  -webkit-appearance: none;
+.image-with-border {
+  border: 2px solid $grey-3;
 }
 
-.form-control.disabled {
-  border-color: $grey-2;
-  color: $grey-2;
+.bulleted-list {
+  list-style-type: disc;
+  margin-bottom: 20px;
+  padding-left: 20px;
 }
 
 .container {
@@ -92,7 +139,7 @@ img {
 // pages styling
 .product-page-section {
   padding: 50px 0;
-  border-bottom: 1px solid #BFC1C3;
+  border-bottom: 1px solid $grey-2;
 
   &:last-of-type {
     border-bottom: none;
@@ -100,35 +147,31 @@ img {
 
   h2, h3 {
     margin-top: 0;
+
     &.section-header {
       padding: 0 15px;
     }
-    &.centered {
-      text-align: center;
-    }
-
   }
 }
 
 .masthead {
-  background-color: #005EA5;
-  color: #fff;
+  background-color: $govuk-blue;
+  color: $white;
   max-width: 100%;
 
   h1 {
-    margin-bottom: 0.5em;
+    margin-bottom: 10px;
     margin-top: 0;
   }
 
   img {
     max-width: 100%;
-    display: block;
   }
 
   a.button.button-start {
-    background: #fff;
+    background: $white;
     box-shadow: 0 2px 0 #003259;
-    color: #005EA5;
+    color: $govuk-blue;
     font-weight: bold;
     padding: 10px 25px 8px 20px;
   }
@@ -136,7 +179,7 @@ img {
 
 .org-logos {
   font-size: 0;
-  margin-top: 40px;
+  margin-top: $gutter;
   text-align: center;
 
   li {
@@ -144,78 +187,38 @@ img {
     margin: 20px 1%;
     width: 28%;
     height: 100px;
+
     @include media(tablet) {
       width: 14%;
     }
-
   }
-
-  img {
-    display: block;
-
-    &.home-office {
-      width: 100px;
-    }
-
-    &.fco {
-      width: 115px;
-    }
-
-    &.dwp {
-      width: 90px;
-    }
-
-    &.education {
-      width: 95px;
-    }
-
-    &.moj {
-      width: 75px;
-    }
-  }
-}
-
-.image-with-border {
-  border: 2px solid $grey-3;
-}
-
-.bulleted-list {
-  list-style-type: disc;
-  padding-left: 20px;
 }
 
 .typeahead__wrapper {
   width: 50%;
 }
 
-.filter-locations {
-  border: 2px solid $grey-3;
-  margin-bottom: 40px;
-  padding: 20px;
-
-  .heading-medium {
-    margin-top: 0;
-  }
-
-  .bold-small {
-    margin-bottom: 10px;
-  }
-
-  .button {
-    margin-top: 20px;
-  }
-}
-
 .logo {
+  display: block;
   max-height: 100px;
-  &.quote {
-    margin-top: 20px;
-  }
-}
 
-span.petitions {
-  font-family: Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 22px;
-  padding-left: 5px;
+  &.home-office {
+    width: 100px;
+  }
+
+  &.fco {
+    width: 115px;
+  }
+
+  &.dwp {
+    width: 90px;
+  }
+
+  &.education {
+    width: 95px;
+  }
+
+  &.moj {
+    width: 75px;
+  }
 }

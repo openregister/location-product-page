@@ -29,7 +29,7 @@
                 %input#location-type-3{name: "location-types", type: "checkbox", value: "location-inactive"}
                 %label{for: "location-type-3"} Inactive
         %button.button Filter
-      
+
       %h2.heading-large #{@locations.count} Locations found
 
       = form_for root_path do |f|
@@ -51,7 +51,7 @@
         %li= link_to "Use this data in your service", "https://registers.cloudapps.digital/using-registers", target: :blank
 
   .grid-row
-    .column-full
+    .column-two-thirds
       %h3.heading-medium View results on a table
       %details{:role => "group"}
         %summary{"aria-controls" => "details-content-0", "aria-expanded" => "false", :role => "button"}
@@ -70,7 +70,8 @@
             %dd The date a record first became relevant to a register. For example, the date a country was first recognised by the UK
             %dt End date:
             %dd The date a record stopped being applicable. For example, the date a school closed down
-
+  .grid-row
+    .column-full
       %table
         %colgroup
           %col{width: '10%'}
