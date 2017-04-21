@@ -31,11 +31,11 @@
                 %label{for: "location-type-3"} Inactive
         %button.button Filter
 
-      / = form_for root_path do |f|
-      /   %h3.heading-medium Location picker
-      /   .form-group
-      /     %label.form-label-bold.visually-hidden Select location
-      /     = f.select "locations", @locations.map(&:name), {}, id: "country_select", class: "form-control"
+      = form_for root_path do |f|
+        %h3.heading-medium Location picker
+        .form-group
+          %label.form-label-bold.visually-hidden Select location
+          = f.select "locations", @locations.map(&:name), {}, id: "country_select", class: "form-control"
 
     .column-one-third
       %h3.heading-medium About the register
