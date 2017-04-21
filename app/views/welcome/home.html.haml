@@ -35,18 +35,25 @@
 
   .product-page-section
     .grid-row
-      %h2.heading-large.section-header Data provided by government organisations
-      .column-two-thirds
-        %blockquote
-          The register is a means for the FCO to share our knowledge more widely, not least for our usual audience of subject matter experts, but also with other government partners and stakeholders. We can now think in more detail about what colleagues across government actually need.
-          %p.bold-xsmall Tony Worron - Desk Officer for Geographical Information Policy, FCO
-      .column-one-third
-        = image_tag "1280px-Foreign_and_Commonwealth_Office_Logo.svg.png", class: "logo quote"
+      .column-full
+        %h2.heading-large.section-header Who is using Registers
+        .column-two-thirds
+          %blockquote
+            As a high profile site, 
+            = link_to "https://petition.parliament.uk", "https://petition.parliament.uk", target: :blank
+            needs to be accurate and up-to-date wherever possible, so when we were given the chance to remove one more static set of data with an API we jumped at the chance. 
+            %strong Having an authoritative list that updates automatically eliminates a huge amount of effort when validating data and we were able to identity a number of places where we had used the wrong country name previously.
+
+            %cite Andrew White - UK Government and Parliamnent Petitions
+        .column-one-third
+          = image_tag "graphic_portcullis.png", class: "logo quote"
+          %span.petitions 
+            Petitions
 
   .product-page-section
     .grid-row
       .column-one-half
-        %h2.heading-large Location picker
+        %h2.heading-large Location data ready to use
         %p We’ve built a location picker that uses the Country and Territory registers. With this picker, the users of your service will be able to provide information using authoritative and reliable data.
         %p
           = link_to "Find more about our location picker", "https://designnotes.blog.gov.uk/2017/04/20/were-building-an-autocomplete/", target: :blank
@@ -56,7 +63,7 @@
   .product-page-section
     .grid-row
       .column-full
-        %h2.heading-large.section-header.centered Who's working with Registers
+        %h2.heading-large.section-header.centered Organisations creating Registers
         %ul.org-logos
           %li= image_tag "Home_Office.svg", class: "logo", id: "home-office"
           %li= image_tag "1280px-Foreign_and_Commonwealth_Office_Logo.svg.png", class: "logo", id: "fco"
@@ -64,6 +71,7 @@
           %li= image_tag "Department_for_Education.svg", class: "logo", id: "education"
           %li= image_tag "Ministry_of_Justice_logo.svg", class: "logo", id: "moj"
           %li= image_tag "Department_for_Communities_and_Local_Government_logo.svg", class: "logo", id: "local-government"
+
 
   .product-page-section
     .grid-row
